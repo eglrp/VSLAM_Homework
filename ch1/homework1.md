@@ -238,7 +238,6 @@ ${Pangolin_LIBRARIES}
 ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
 ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 ```
-
 ## 五、使用摄像头或视频运行 ORB-SLAM2
 
 #### 1.顺利编译结果
@@ -248,7 +247,15 @@ ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 注意：这里名字不一样是因为我更换了电脑进行编译。
 #### 2.我的cmakelist修改方案
 
+#生成调用myvideo.mp4的可执行文件
+```
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/MyWork)
+add_executable(myvideo Examples/MyWork/myvideo.cpp)
+target_link_libraries(myvideo ${PROJECT_NAME})
 
+add_executable(myslam Examples/MyWork/myslam.cpp)
+target_link_libraries(myslam ${PROJECT_NAME})
+```
 
 #### 3.实际运行截图
 
