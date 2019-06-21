@@ -181,9 +181,78 @@ install(FILES ${PROJECT_SOURCE_DIR}/include/hello.h DESTINATION /usr/local/inclu
 
 (a) ORB-SLAM2 将编译出什么结果?有几个库文件和可执行文件?
 
+**回答：**
+
+一个库文件：
+ORB_SLAM2.so
+
+6个可执行测试文件：
+
+rgbd_tum、stereo_kitti、stereo_euroc、mono_tum、
+mono_kitti、mono_euroc
+
+
+
+
 (b) ORB-SLAM2 中的 include, src, Examples 三个文件夹中都含有什么内容?
+
+- include文件夹：生成库的头文件
+- src文件夹： 生成库的源码
+- Example： 可执行文件与不同相机对应的相机标定文件
 
 (c) ORB-SLAM2 中的可执行文件链接到了哪些库?它们的名字是什么?
 
+**回答：**
 
-# 五、使用摄像头或视频运行 ORB-SLAM2
+链接的库文件包括：
+
+自身编译生成的动态库如下：
+```
+src/System.cc
+src/Tracking.cc
+src/LocalMapping.cc
+src/LoopClosing.cc
+src/ORBextractor.cc
+src/ORBmatcher.cc
+src/FrameDrawer.cc
+src/Converter.cc
+src/MapPoint.cc
+src/KeyFrame.cc
+src/Map.cc
+src/MapDrawer.cc
+src/Optimizer.cc
+src/PnPsolver.cc
+src/Frame.cc
+src/KeyFrameDatabase.cc
+src/Sim3Solver.cc
+src/Initializer.cc
+src/Viewer.cc
+```
+
+外部链接的库包括：
+
+```
+${OpenCV_LIBS}
+${EIGEN3_LIBS}
+${Pangolin_LIBRARIES}
+${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+```
+
+## 五、使用摄像头或视频运行 ORB-SLAM2
+
+#### 1.顺利编译结果
+
+![编译成功图](assets/markdown-img-paste-20190621160948380.png)
+
+注意：这里名字不一样是因为我更换了电脑进行编译。
+#### 2.我的cmakelist修改方案
+
+
+
+#### 3.实际运行截图
+
+
+## 六、感悟
+
+我
