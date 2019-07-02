@@ -145,8 +145,141 @@ int main(int argc, char **argv) {
 
 **回答：**
 
+二范数定义：谱范数，常用语度量距离。A^T*A的最大特征值的开平方。
 
+
+
+```cpp
+string truth_file = "../groundtruth.txt";
+string estimated_file = "../estimated.txt";
+ifstream trajectory;
+ifstream estimated_trajectory;
+// 两个要做运算的变换矩阵
+Sophus::SE3 Twc_g;
+Sophus::SE3 Twc_e;
+
+Eigen::Quaterniond q_g;
+Eigen::Quaterniond q_e;
+
+Eigen::Vector3d t_g;
+Eigen::Vector3d t_e;
+
+Eigen::Matrix<double ,6,1> temp;
+double time_g;
+double time_e;
+
+double err = 0;
+double RMSE = 0;
+
+int main(int argc, char **argv) {
+
+    trajectory.open(truth_file.c_str());
+    if (!trajectory.is_open()){
+        cout << "the file is empty!!" << endl;
+        return -1;
+    }
+
+    estimated_trajectory.open(estimated_file.c_str());
+    if (!estimated_trajectory.is_open()){
+        cout << "the file is empty!!" << endl;
+        return -1;
+    }
+
+    int num = 0;
+    string sGLine, sELine;
+    while(getline(trajectory, sGLine) && !sGLine.empty()
+                    &&getline(estimated_trajectory, sELine) && !sELine.empty()){
+        istringstream issG(sGLine);
+        istringstream issE(sELine);
+        issG >> time_g >> t_g[0] >> t_g[1] >> t_g[2] >> q_g.x()>>q_g.y()>>q_g.z()>>q_g.w();
+        issE >> time_e >> t_e[0] >> t_e[1] >> t_e[2] >> q_e.x()>>q_e.y()>>q_e.z()>>q_e.w();
+
+        Twc_e = Sophus::SE3(q_e,t_e);
+        Twc_g = Sophus::SE3(q_g,t_g);
+
+        // .log()表示转换为李代数，平移在前旋转在后
+        temp = (Twc_g.inverse() * Twc_e).log();
+        err += temp.transpose() * temp;
+        num ++;
+    }
+
+    RMSE = sqrt(err/num);
+    trajectory.close();
+    estimated_trajectory.close();
+    // end your code here
+
+    cout << "RMSE:" << RMSE << endl;
+
+    return 0;
+}
+
+```
+
+**程序运行结果**
+
+![程序运行结果](assets/markdown-img-paste-20190702214705160.png)
 
 将两条轨迹画在同一个图里，观察轨迹之间的误差。
 
 **回答：**
+
+![误差对比图](assets/markdown-img-paste-2019070220415775.png)
+
+
+```cpp
+string truth_file = "../groundtruth.txt";
+string estimated_file = "../estimated.txt";
+
+// function for plotting trajectory, don't edit this code
+// start point is red and end point is blue
+void DrawTrajectory(vector<Sophus::SE3, Eigen::aligned_allocator<Sophus::SE3>>);
+
+int main(int argc, char **argv) {
+
+    vector<Sophus::SE3, Eigen::aligned_allocator<Sophus::SE3>> poses;
+
+    /// implement pose reading code
+    // start your code here (5~10 lines)
+    Eigen::Quaterniond q;
+    Eigen::Vector3d t;
+    Sophus::SE3 T;
+    ifstream trajectory;
+    ifstream estimated_trajectory;
+    double time_stamp;
+
+    trajectory.open(truth_file.c_str());
+    if (!trajectory.is_open()){
+        cout << "the file is empty!!" << endl;
+        return -1;
+    }
+
+    estimated_trajectory.open(estimated_file.c_str());
+    if (!estimated_trajectory.is_open()){
+        cout << "the file is empty!!" << endl;
+        return -1;
+    }
+
+    string sLine;
+    while(getline(trajectory, sLine) && !sLine.empty()){
+        istringstream iss(sLine);
+        iss >> time_stamp >> t[0] >> t[1] >> t[2] >> q.x() >> q.y() >> q.z() >> q.w();
+        T = Sophus::SE3(q, t);
+        poses.push_back(T);
+    }
+
+    while(getline(estimated_trajectory, sLine) && !sLine.empty()){
+        istringstream iss(sLine);
+        iss >> time_stamp >> t[0] >> t[1] >> t[2] >> q.x() >> q.y() >> q.z() >> q.w();
+        T = Sophus::SE3(q, t);
+        poses.push_back(T);
+    }
+
+    trajectory.close();
+    estimated_trajectory.close();
+    // end your code here
+
+    DrawTrajectory(poses);
+    return 0;
+}
+
+```
