@@ -1,5 +1,5 @@
 //
-// Created by 高翔 on 2017/12/15.
+// Created by xuzhi.
 //
 
 #include <opencv2/opencv.hpp>
@@ -12,9 +12,9 @@ using namespace std;
 using namespace Eigen;
 
 // 文件路径，如果不对，请调整
-string left_file = "./left.png";
-string right_file = "./right.png";
-string disparity_file = "./disparity.png";
+string left_file = "../left.png";
+string right_file = "../right.png";
+string disparity_file = "../disparity.png";
 
 // 在panglin中画图，已写好，无需调整
 void showPointCloud(const vector<Vector4d, Eigen::aligned_allocator<Vector4d>> &pointcloud);
@@ -23,8 +23,10 @@ int main(int argc, char **argv) {
 
     // 内参
     double fx = 718.856, fy = 718.856, cx = 607.1928, cy = 185.2157;
-    // 间距
+    // 间距:baseline
     double d = 0.573;
+    // 归一化坐标中的x, y
+    double x_normal, y_normal;
 
     // 读取图像
     cv::Mat left = cv::imread(left_file, 0);
@@ -35,14 +37,23 @@ int main(int argc, char **argv) {
     vector<Vector4d, Eigen::aligned_allocator<Vector4d>> pointcloud;
 
     // TODO 根据双目模型计算点云
-    // 如果你的机器慢，请把后面的v++和u++改成v+=2, u+=2
+    // 根据d，求出z
     for (int v = 0; v < left.rows; v++)
         for (int u = 0; u < left.cols; u++) {
-
             Vector4d point(0, 0, 0, left.at<uchar>(v, u) / 255.0); // 前三维为xyz,第四维为颜色
-
             // start your code here (~6 lines)
-            // 根据双目模型计算 point 的位置
+            // 根据双目模型计算 point 的位置 z = f*b/d
+
+            auto z = fx*d/(disparity.at<uchar>(v,u));
+
+            x_normal = (u-cx)/fx;
+            y_normal = (v-cy)/fy;
+
+            point[0] = x_normal * z;
+            point[1] = y_normal * z;
+            point[2] = z;
+            pointcloud.push_back(point);
+
             // end your code here
         }
 

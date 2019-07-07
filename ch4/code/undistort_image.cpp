@@ -7,7 +7,7 @@
 
 using namespace std;
 
-string image_file = "./test.png";   // 请确保路径正确
+string image_file = "../test.png";   // 请确保路径正确
 
 int main(int argc, char **argv) {
 
@@ -21,6 +21,7 @@ int main(int argc, char **argv) {
     int rows = image.rows, cols = image.cols;
     cv::Mat image_undistort = cv::Mat(rows, cols, CV_8UC1);   // 去畸变以后的图
 
+    double r_2, r_4, x, y, x_distorted, y_distorted;
     // 计算去畸变后图像的内容
     for (int v = 0; v < rows; v++)
         for (int u = 0; u < cols; u++) {
@@ -28,7 +29,16 @@ int main(int argc, char **argv) {
             double u_distorted = 0, v_distorted = 0;
             // TODO 按照公式，计算点(u,v)对应到畸变图像中的坐标(u_distorted, v_distorted) (~6 lines)
             // start your code here
-            
+            x = (u-cx)/fx;
+            y = (v-cy)/fy;
+            r_2 = x*x + y*y;
+            r_4 = r_2 * r_2;
+
+            x_distorted = x * (1 + k1*r_2 + k2 *r_4) + 2*p1*x*y + p2*(r_2 + 2* x * x);
+            y_distorted = y * (1+k1*r_2+k2*r_4)+p1*(r_2+2*y*y)+2*p2*x*y;
+
+            u_distorted = x_distorted * fx + cx;
+            v_distorted = y_distorted * fy + cy;
             // end your code here
 
             // 赋值 (最近邻插值)
@@ -42,6 +52,6 @@ int main(int argc, char **argv) {
     // 画图去畸变后图像
     cv::imshow("image undistorted", image_undistort);
     cv::waitKey();
-
+    cv::imwrite("../undistorted.jpg", image_undistort);
     return 0;
 }

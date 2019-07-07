@@ -1,5 +1,5 @@
 //
-// Created by 高翔 on 2017/12/15.
+// Created by xuzhi.
 //
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -11,7 +11,7 @@ using namespace Eigen;
 
 int main(int argc, char **argv) {
     double ar = 1.0, br = 2.0, cr = 1.0;         // 真实参数值
-    double ae = 2.0, be = -1.0, ce = 5.0;        // 估计参数值
+    double ae = 2.0, be = -1.0, ce = 5.0;        // 估计参数值  这里等于是给了个初始值
     int N = 100;                                 // 数据点
     double w_sigma = 1.0;                        // 噪声Sigma值
     cv::RNG rng;                                 // OpenCV随机数产生器
@@ -33,26 +33,32 @@ int main(int argc, char **argv) {
         Vector3d b = Vector3d::Zero();             // bias
         cost = 0;
 
+        // 这个计算量真的大，每一次迭代都要求H和b
         for (int i = 0; i < N; i++) {
             double xi = x_data[i], yi = y_data[i];  // 第i个数据点
+
             // start your code here
             double error = 0;   // 第i个数据点的计算误差
-            error = 0; // 填写计算error的表达式
+            error = yi - exp(ae*xi*xi+be*xi+ce); // 填写计算error的表达式
             Vector3d J; // 雅可比矩阵
-            J[0] = 0;  // de/da
-            J[1] = 0;  // de/db
-            J[2] = 0;  // de/dc
+            double temp = -exp(ae*xi*xi+be*xi+ce);
+            J[0] = temp*xi*xi;  // de/da
+            J[1] = temp*xi;  // de/db
+            J[2] = temp;  // de/dc
 
             H += J * J.transpose(); // GN近似的H
-            b += -error * J;
+            b += -error * J;    // 这里的error是个标量
             // end your code here
 
-            cost += error * error;
+            cost += error * error; // 保证不被正负抵消
         }
 
-        // 求解线性方程 Hx=b，建议用ldlt
+        // todo 求解线性方程 Hx=b，建议用ldlt
  	// start your code here
         Vector3d dx;
+        // 这里的dx面向的是abc，是abc的步进
+        dx = H.ldlt().solve(b);
+        // cout << dx[0] << "  " << dx[1] << "  " << dx[2] << endl;
 	// end your code here
 
         if (isnan(dx[0])) {
