@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xbot/VSLAM_Homework/ch5/code/computeORB.cpp
+opencv2/opencv.hpp
+-
+math.h
+/home/xbot/VSLAM_Homework/ch5/code/math.h
+string
+-
+algorithm
+-
+chrono
+-
+
