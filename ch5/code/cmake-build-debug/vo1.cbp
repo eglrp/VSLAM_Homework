@@ -5,13 +5,79 @@
 		<Option title="vo1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\OpenCV\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\slambook\;CMake Files\..\..\..\slambook\3rdparty\;CMake Files\..\..\..\slambook\3rdparty\Sophus\;CMake Files\..\..\..\slambook\3rdparty\Sophus\build\;CMake Files\..\..\..\slambook\3rdparty\Pangolin\;CMake Files\..\..\..\slambook\3rdparty\Pangolin\build\;CMake Files\..\..\..\slambook\3rdparty\Pangolin\build\src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ICP">
+				<Option output="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/ICP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 ICP"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ICP/fast">
+				<Option output="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/ICP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 ICP/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -27,6 +93,62 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="GN-BA">
+				<Option output="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/GN-BA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 GN-BA"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GN-BA/fast">
+				<Option output="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/GN-BA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 GN-BA/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="computeORB">
 				<Option output="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/computeORB" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
@@ -34,7 +156,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
 					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
 					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
@@ -59,7 +184,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
 					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
 					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
@@ -77,17 +205,72 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="E2Rt">
+				<Option output="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/E2Rt" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 E2Rt"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="E2Rt/fast">
+				<Option output="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/E2Rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 E2Rt/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/E2Rt.cpp">
+			<Option target="E2Rt"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/GN-BA.cpp">
+			<Option target="GN-BA"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/ICP.cpp">
+			<Option target="ICP"/>
+		</Unit>
 		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/computeORB.cpp">
 			<Option target="computeORB"/>
 		</Unit>
@@ -105,6 +288,18 @@
 		</Unit>
 		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/../../../slambook/3rdparty/Sophus/build/SophusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\slambook\3rdparty\Sophus\build\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/../../../slambook/3rdparty/Pangolin/build/src/PangolinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\slambook\3rdparty\Pangolin\build\src\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/../../../slambook/3rdparty/Pangolin/build/src/PangolinConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\slambook\3rdparty\Pangolin\build\src\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch5/code/../../../slambook/3rdparty/Pangolin/build/src/PangolinTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\slambook\3rdparty\Pangolin\build\src\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

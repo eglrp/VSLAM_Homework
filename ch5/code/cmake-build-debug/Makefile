@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ICP
+
+# Build rule for target.
+ICP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ICP
+.PHONY : ICP
+
+# fast build rule for target.
+ICP/fast:
+	$(MAKE) -f CMakeFiles/ICP.dir/build.make CMakeFiles/ICP.dir/build
+.PHONY : ICP/fast
+
+#=============================================================================
+# Target rules for targets named GN-BA
+
+# Build rule for target.
+GN-BA: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GN-BA
+.PHONY : GN-BA
+
+# fast build rule for target.
+GN-BA/fast:
+	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/build
+.PHONY : GN-BA/fast
+
+#=============================================================================
 # Target rules for targets named computeORB
 
 # Build rule for target.
@@ -122,6 +148,100 @@ computeORB: cmake_check_build_system
 computeORB/fast:
 	$(MAKE) -f CMakeFiles/computeORB.dir/build.make CMakeFiles/computeORB.dir/build
 .PHONY : computeORB/fast
+
+#=============================================================================
+# Target rules for targets named E2Rt
+
+# Build rule for target.
+E2Rt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 E2Rt
+.PHONY : E2Rt
+
+# fast build rule for target.
+E2Rt/fast:
+	$(MAKE) -f CMakeFiles/E2Rt.dir/build.make CMakeFiles/E2Rt.dir/build
+.PHONY : E2Rt/fast
+
+E2Rt.o: E2Rt.cpp.o
+
+.PHONY : E2Rt.o
+
+# target to build an object file
+E2Rt.cpp.o:
+	$(MAKE) -f CMakeFiles/E2Rt.dir/build.make CMakeFiles/E2Rt.dir/E2Rt.cpp.o
+.PHONY : E2Rt.cpp.o
+
+E2Rt.i: E2Rt.cpp.i
+
+.PHONY : E2Rt.i
+
+# target to preprocess a source file
+E2Rt.cpp.i:
+	$(MAKE) -f CMakeFiles/E2Rt.dir/build.make CMakeFiles/E2Rt.dir/E2Rt.cpp.i
+.PHONY : E2Rt.cpp.i
+
+E2Rt.s: E2Rt.cpp.s
+
+.PHONY : E2Rt.s
+
+# target to generate assembly for a file
+E2Rt.cpp.s:
+	$(MAKE) -f CMakeFiles/E2Rt.dir/build.make CMakeFiles/E2Rt.dir/E2Rt.cpp.s
+.PHONY : E2Rt.cpp.s
+
+GN-BA.o: GN-BA.cpp.o
+
+.PHONY : GN-BA.o
+
+# target to build an object file
+GN-BA.cpp.o:
+	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/GN-BA.cpp.o
+.PHONY : GN-BA.cpp.o
+
+GN-BA.i: GN-BA.cpp.i
+
+.PHONY : GN-BA.i
+
+# target to preprocess a source file
+GN-BA.cpp.i:
+	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/GN-BA.cpp.i
+.PHONY : GN-BA.cpp.i
+
+GN-BA.s: GN-BA.cpp.s
+
+.PHONY : GN-BA.s
+
+# target to generate assembly for a file
+GN-BA.cpp.s:
+	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/GN-BA.cpp.s
+.PHONY : GN-BA.cpp.s
+
+ICP.o: ICP.cpp.o
+
+.PHONY : ICP.o
+
+# target to build an object file
+ICP.cpp.o:
+	$(MAKE) -f CMakeFiles/ICP.dir/build.make CMakeFiles/ICP.dir/ICP.cpp.o
+.PHONY : ICP.cpp.o
+
+ICP.i: ICP.cpp.i
+
+.PHONY : ICP.i
+
+# target to preprocess a source file
+ICP.cpp.i:
+	$(MAKE) -f CMakeFiles/ICP.dir/build.make CMakeFiles/ICP.dir/ICP.cpp.i
+.PHONY : ICP.cpp.i
+
+ICP.s: ICP.cpp.s
+
+.PHONY : ICP.s
+
+# target to generate assembly for a file
+ICP.cpp.s:
+	$(MAKE) -f CMakeFiles/ICP.dir/build.make CMakeFiles/ICP.dir/ICP.cpp.s
+.PHONY : ICP.cpp.s
 
 computeORB.o: computeORB.cpp.o
 
@@ -156,9 +276,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... computeORB"
 	@echo "... edit_cache"
+	@echo "... ICP"
+	@echo "... rebuild_cache"
+	@echo "... GN-BA"
+	@echo "... computeORB"
+	@echo "... E2Rt"
+	@echo "... E2Rt.o"
+	@echo "... E2Rt.i"
+	@echo "... E2Rt.s"
+	@echo "... GN-BA.o"
+	@echo "... GN-BA.i"
+	@echo "... GN-BA.s"
+	@echo "... ICP.o"
+	@echo "... ICP.i"
+	@echo "... ICP.s"
 	@echo "... computeORB.o"
 	@echo "... computeORB.i"
 	@echo "... computeORB.s"

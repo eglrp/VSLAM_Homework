@@ -9,12 +9,12 @@
 
 using namespace Eigen;
 
-#include <sophus/so3.hpp>
+#include <sophus/so3.h>
+using namespace Sophus;
 
 #include <iostream>
 
 using namespace std;
-
 int main(int argc, char **argv) {
 
     // 给定Essential矩阵
@@ -29,7 +29,15 @@ int main(int argc, char **argv) {
 
     // SVD and fix sigular values
     // START YOUR CODE HERE
-
+    JacobiSVD<Eigen::MatrixXd> svd(E, ComputeThinU | ComputeThinV );
+    Matrix3d U = svd.matrixU();
+    Matrix3d V = svd.matrixV();
+    Matrix3d A = U.inverse() * E * V.transpose().inverse();
+    vector<double> sigma = {A(0,0), A(1,1), A(2,2)};
+    sort(sigma.begin(),sigma.end());
+    A << (sigma.at(2)+sigma.at(1))/2, 0, 0,
+            0, (sigma.at(2)+sigma.at(1))/2,0,
+            0,0,0;
     // END YOUR CODE HERE
 
     // set t1, t2, R1, R2 
@@ -39,12 +47,23 @@ int main(int argc, char **argv) {
 
     Matrix3d R1;
     Matrix3d R2;
+
+    Matrix3d R_Z1 = AngleAxisd(M_PI/2,Vector3d(0,0,1)).matrix();
+    Matrix3d R_Z2 = AngleAxisd(-M_PI/2,Vector3d(0,0,1)).matrix();
+
+
+    t_wedge1 = U * R_Z1 * A * U.transpose();
+    t_wedge2 = U * R_Z2 * A * U.transpose();
+    R1 = U * R_Z1.transpose() * V.transpose();
+    R2 = U * R_Z2.transpose() * V.transpose();
+
+
     // END YOUR CODE HERE
 
     cout << "R1 = " << R1 << endl;
     cout << "R2 = " << R2 << endl;
-    cout << "t1 = " << Sophus::SO3d::vee(t_wedge1) << endl;
-    cout << "t2 = " << Sophus::SO3d::vee(t_wedge2) << endl;
+    cout << "t1 = " << Sophus::SO3::vee(t_wedge1) << endl;
+    cout << "t2 = " << Sophus::SO3::vee(t_wedge2) << endl;
 
     // check t^R=E up to scale
     Matrix3d tR = t_wedge1 * R1;

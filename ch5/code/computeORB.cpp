@@ -75,7 +75,7 @@ int main(int argc, char **argv) {
     cv::drawKeypoints(first_image, keypoints, image_show, cv::Scalar::all(-1),
                       cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
     // cv::imshow("features", image_show);
-    cv::imwrite("/home/xbot/VSLAM_Homework/ch5/feat1.png", image_show);
+    // cv::imwrite("/home/xbot/VSLAM_Homework/ch5/feat1.png", image_show);
     cv::waitKey(0);
 
     // we can also match descriptors between images
@@ -98,8 +98,8 @@ int main(int argc, char **argv) {
 
     // plot the matches
     cv::drawMatches(first_image, keypoints, second_image, keypoints2, matches, image_show);
-    // cv::imshow("matches", image_show);
-    cv::imwrite("matches.png", image_show);
+    cv::imshow("matches", image_show);
+    // cv::imwrite("/home/xbot/VSLAM_Homework/ch5/matches_d_80.png", image_show);
     cv::waitKey(0);
 
     cout << "done." << endl;
@@ -425,13 +425,16 @@ void computeORBDesc(const cv::Mat &image, vector<cv::KeyPoint> &keypoints, vecto
             u2_update =u + (int) (cos(theta)*ORB_pattern[i*4 + 2] -sin(theta)*ORB_pattern[i*4 + 3]);
             v2_update =v + (int) (sin(theta)*ORB_pattern[i*4 + 2] + cos(theta)*ORB_pattern[i*4 + 3]);
 
+
             if (!inImage(u1_update,v1_update) || !inImage(u2_update,v2_update)){
                 d.clear();
                 break;
             }else{
-                double intensity1 = image.at<uchar>(u1_update,v1_update);
-                double intensity2 = image.at<uchar>(u2_update, v2_update);
+                double intensity1 = image.at<uchar>(v1_update,u1_update);
+                double intensity2 = image.at<uchar>(v2_update, u2_update);
                 d[i] = (intensity1 > intensity2) ? 0 : 1;
+
+
             }
 	    // END YOUR CODE HERE
         }
@@ -449,9 +452,47 @@ void computeORBDesc(const cv::Mat &image, vector<cv::KeyPoint> &keypoints, vecto
 // brute-force matching
 void bfMatch(const vector<DescType> &desc1, const vector<DescType> &desc2, vector<cv::DMatch> &matches) {
     int d_max = 50;
-
     // TODO: START YOUR CODE HERE (~12 lines)
-    // find matches between desc1 and desc2. 
+    // find matches between desc1 and desc2.
+
+    steady_clock::time_point t1 = steady_clock::now();
+
+    DescType d1, d2;
+
+    for (int i = 0; i < desc1.size(); ++i) {
+
+        int d_min = 256, minIndex = 0;
+        d1 = desc1[i];
+        if (d1.empty()) continue;
+
+        for (int j = 0; j < desc2.size(); ++j) {
+            int distance = 0;
+            d2 = desc2[j];
+            if (d2.empty()) continue;
+            for (int k = 0; k < 256; ++k) {
+                if (d1[k] ^ d2[k]){
+                    distance += 1;
+                }
+            }
+
+            if (distance < d_min){
+                d_min = distance;
+                minIndex = j;
+            }
+        }
+
+        if (d_min > 0 && d_min < d_max){
+            DMatch match;
+            match.queryIdx = i;
+            match.trainIdx = minIndex;
+            match.distance = d_min;
+            matches.push_back(match);
+        }
+    }
+
+    steady_clock::time_point t2 = steady_clock::now();
+    duration<double> time_used = duration_cast<duration<double>>(t2 - t1);
+    cout << " Match time cost= " << time_used.count() << " seconds." << endl;
     // END YOUR CODE HERE
 
     for (auto &m: matches) {

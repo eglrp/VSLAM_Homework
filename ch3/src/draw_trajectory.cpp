@@ -90,5 +90,4 @@ void DrawTrajectory(vector<Sophus::SE3, Eigen::aligned_allocator<Sophus::SE3>> p
         pangolin::FinishFrame();
         usleep(5000);   // sleep 5 ms
     }
-
 }

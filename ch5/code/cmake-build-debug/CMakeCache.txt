@@ -220,11 +220,17 @@ G2O_DIR:PATH=G2O_DIR-NOTFOUND
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/share/OpenCV
 
+//The directory containing a CMake configuration file for Pangolin.
+Pangolin_DIR:PATH=/home/xbot/slambook/3rdparty/Pangolin/build/src
+
 //Path to a program.
 ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
+
+//The directory containing a CMake configuration file for Sophus.
+Sophus_DIR:PATH=/home/xbot/slambook/3rdparty/Sophus/build
 
 //Value Computed by CMake
 vo1_BINARY_DIR:STATIC=/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug

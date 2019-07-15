@@ -65,13 +65,87 @@ CMAKE_SOURCE_DIR = /home/xbot/VSLAM_Homework/ch5/code
 CMAKE_BINARY_DIR = /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/ICP.dir
+
+# All Build rule for target.
+CMakeFiles/ICP.dir/all:
+	$(MAKE) -f CMakeFiles/ICP.dir/build.make CMakeFiles/ICP.dir/depend
+	$(MAKE) -f CMakeFiles/ICP.dir/build.make CMakeFiles/ICP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target ICP"
+.PHONY : CMakeFiles/ICP.dir/all
+
+# Include target in all.
+all: CMakeFiles/ICP.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ICP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ICP.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ICP.dir/rule
+
+# Convenience name for target.
+ICP: CMakeFiles/ICP.dir/rule
+
+.PHONY : ICP
+
+# clean rule for target.
+CMakeFiles/ICP.dir/clean:
+	$(MAKE) -f CMakeFiles/ICP.dir/build.make CMakeFiles/ICP.dir/clean
+.PHONY : CMakeFiles/ICP.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/ICP.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/GN-BA.dir
+
+# All Build rule for target.
+CMakeFiles/GN-BA.dir/all:
+	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/depend
+	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target GN-BA"
+.PHONY : CMakeFiles/GN-BA.dir/all
+
+# Include target in all.
+all: CMakeFiles/GN-BA.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/GN-BA.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GN-BA.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/GN-BA.dir/rule
+
+# Convenience name for target.
+GN-BA: CMakeFiles/GN-BA.dir/rule
+
+.PHONY : GN-BA
+
+# clean rule for target.
+CMakeFiles/GN-BA.dir/clean:
+	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/clean
+.PHONY : CMakeFiles/GN-BA.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/GN-BA.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/computeORB.dir
 
 # All Build rule for target.
 CMakeFiles/computeORB.dir/all:
 	$(MAKE) -f CMakeFiles/computeORB.dir/build.make CMakeFiles/computeORB.dir/depend
 	$(MAKE) -f CMakeFiles/computeORB.dir/build.make CMakeFiles/computeORB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target computeORB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target computeORB"
 .PHONY : CMakeFiles/computeORB.dir/all
 
 # Include target in all.
@@ -98,6 +172,43 @@ CMakeFiles/computeORB.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/computeORB.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/E2Rt.dir
+
+# All Build rule for target.
+CMakeFiles/E2Rt.dir/all:
+	$(MAKE) -f CMakeFiles/E2Rt.dir/build.make CMakeFiles/E2Rt.dir/depend
+	$(MAKE) -f CMakeFiles/E2Rt.dir/build.make CMakeFiles/E2Rt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target E2Rt"
+.PHONY : CMakeFiles/E2Rt.dir/all
+
+# Include target in all.
+all: CMakeFiles/E2Rt.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/E2Rt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/E2Rt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch5/code/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/E2Rt.dir/rule
+
+# Convenience name for target.
+E2Rt: CMakeFiles/E2Rt.dir/rule
+
+.PHONY : E2Rt
+
+# clean rule for target.
+CMakeFiles/E2Rt.dir/clean:
+	$(MAKE) -f CMakeFiles/E2Rt.dir/build.make CMakeFiles/E2Rt.dir/clean
+.PHONY : CMakeFiles/E2Rt.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/E2Rt.dir/clean
 
 .PHONY : clean
 

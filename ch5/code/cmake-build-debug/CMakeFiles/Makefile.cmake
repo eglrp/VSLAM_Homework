@@ -35,6 +35,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.14.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.3/CMakeSystem.cmake"
+  "/home/xbot/slambook/3rdparty/Pangolin/build/src/PangolinConfig.cmake"
+  "/home/xbot/slambook/3rdparty/Pangolin/build/src/PangolinConfigVersion.cmake"
+  "/home/xbot/slambook/3rdparty/Pangolin/build/src/PangolinTargets.cmake"
+  "/home/xbot/slambook/3rdparty/Sophus/build/SophusConfig.cmake"
   "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/local/share/OpenCV/OpenCVConfig.cmake"
   "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
@@ -54,5 +58,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/ICP.dir/DependInfo.cmake"
+  "CMakeFiles/GN-BA.dir/DependInfo.cmake"
   "CMakeFiles/computeORB.dir/DependInfo.cmake"
+  "CMakeFiles/E2Rt.dir/DependInfo.cmake"
   )
