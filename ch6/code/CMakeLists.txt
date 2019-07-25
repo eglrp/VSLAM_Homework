@@ -1,0 +1,16 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+#SET(BUILD_TYPE Release)
+SET(BUILD_TYPE Debug)
+
+PROJECT(slam_6)
+
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O2")
+FIND_PACKAGE(OpenCV REQUIRED)
+
+INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS} "/usr/include/eigen3")
+
+ADD_EXECUTABLE(optical_flow optical_flow.cpp)
+
+TARGET_LINK_LIBRARIES(optical_flow
+        ${OpenCV_LIBS})
