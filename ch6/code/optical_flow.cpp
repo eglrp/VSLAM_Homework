@@ -90,7 +90,7 @@ int main(int argc, char **argv) {
     // then test multi-level LK
     vector<KeyPoint> kp2_multi;
     vector<bool> success_multi;
-    OpticalFlowMultiLevel(img1, img2, kp1, kp2_multi, success_multi);
+    OpticalFlowMultiLevel(img1, img2, kp1, kp2_multi, success_multi,true);
 
     // use opencv's flow for validation
     vector<Point2f> pt1, pt2;
@@ -127,11 +127,14 @@ int main(int argc, char **argv) {
         }
     }
 
-    // cv::imshow("tracked single level", img2_single);
+    cv::imshow("tracked single level", img2_single);
     cv::imshow("tracked multi level", img2_multi);
-    //cv::imshow("tracked by opencv", img2_CV);
+    cv::imshow("tracked by opencv", img2_CV);
     cv::waitKey(0);
-    // cv::imwrite("/home/xbot/VSLAM_Homework/ch6/image/multi.jpg",img2_multi);
+    // cv::imwrite("/home/xbot/VSLAM_Homework/ch6/image/multi02_inverse.jpg",img2_multi);
+    // cv::imwrite("/home/xbot/VSLAM_Homework/ch6/image/single_inverse_16.jpg",img2_single);
+    // cv::imwrite("/home/xbot/VSLAM_Homework/ch6/image/opencv_16.jpg",img2_CV);
+
     return 0;
 }
 
@@ -195,7 +198,6 @@ void OpticalFlowSingleLevel(
                         J[0] = (GetPixelValue(img1,u1+1,v1) - GetPixelValue(img1,u1-1,v1))/2; // de/dx
                         J[1] = (GetPixelValue(img1,u1,v1+1) - GetPixelValue(img1,u1,v1-1))/2; // de/dy
                     }
-                    // error 有问题
                     // compute H, b and set cost;
                     H += J * J.transpose();
                     b += -error * J ;
@@ -250,20 +252,45 @@ void OpticalFlowMultiLevel(
 
     // parameters
     int pyramids = 4;
-    double pyramid_scale = 0.5;
-    double scales[] = {1.0, 0.5, 0.25, 0.125};
+    double pyramid_scale = 0.3;
+    double scales[] = {1.0, 0.3, 0.09, 0.027};
 
     // create pyramids
-    vector<Mat> pyr1, pyr2; // image pyramids
+    vector<Mat> pyr1, pyr2; // image pyramids 注意这里是个vector
     // TODO START YOUR CODE HERE (~8 lines)
+    Mat img1_temp, img2_temp;
     for (int i = 0; i < pyramids; i++) {
-
+        resize(img1, img1_temp, Size(img1.cols*scales[i],img1.rows*scales[i]));
+        resize(img2, img2_temp, Size(img2.cols*scales[i],img2.rows*scales[i]));
+        pyr1.push_back(img1_temp);
+        pyr2.push_back(img2_temp);
     }
     // TODO END YOUR CODE HERE
-
     // coarse-to-fine LK tracking in pyramids
+    // 这里的关键：上一层的估计值做下一层的初始值
     // TODO START YOUR CODE HERE
+    vector<KeyPoint> kp1_pyr, kp2_pyr, kp2_temp;
+    for (int m = pyramids-1; m >= 0; --m) {
+        img1_temp = pyr1[m];
+        img2_temp = pyr2[m];
 
+        for (auto kp: kp1){
+            kp.pt *= scales[m];
+            kp1_pyr.push_back(kp);
+        }
+        OpticalFlowSingleLevel(img1_temp, img2_temp,kp1_pyr,kp2_temp,success, inverse);
+        kp1_pyr.clear();
+
+        if (m){
+            kp2_pyr.clear();
+            for (auto kp: kp2_temp){
+                kp.pt /= pyramid_scale;
+                kp2_pyr.push_back(kp);
+            }
+            kp2_temp = kp2_pyr;
+        }
+    }
+    kp2 = kp2_pyr;
     // TODO END YOUR CODE HERE
     // don't forget to set the results into kp2
 }

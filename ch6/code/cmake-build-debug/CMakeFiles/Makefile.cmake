@@ -22,6 +22,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU-C.cmake"
   "/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU-CXX.cmake"
   "/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU.cmake"
+  "/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/FindBoost.cmake"
   "/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/FindPackageHandleStandardArgs.cmake"
   "/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/FindPackageMessage.cmake"
   "/home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Internal/CMakeCheckCompilerFlag.cmake"
@@ -35,6 +36,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.14.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.3/CMakeSystem.cmake"
+  "/home/xbot/slambook/3rdparty/Pangolin/build/src/PangolinConfig.cmake"
+  "/home/xbot/slambook/3rdparty/Pangolin/build/src/PangolinConfigVersion.cmake"
+  "/home/xbot/slambook/3rdparty/Pangolin/build/src/PangolinTargets.cmake"
+  "/home/xbot/slambook/3rdparty/Sophus/build/SophusConfig.cmake"
   "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/local/share/OpenCV/OpenCVConfig.cmake"
   "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
@@ -55,4 +60,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/optical_flow.dir/DependInfo.cmake"
+  "CMakeFiles/compute_disparity.dir/DependInfo.cmake"
+  "CMakeFiles/direct_method.dir/DependInfo.cmake"
   )

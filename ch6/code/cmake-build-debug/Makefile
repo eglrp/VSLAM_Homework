@@ -123,6 +123,86 @@ optical_flow/fast:
 	$(MAKE) -f CMakeFiles/optical_flow.dir/build.make CMakeFiles/optical_flow.dir/build
 .PHONY : optical_flow/fast
 
+#=============================================================================
+# Target rules for targets named compute_disparity
+
+# Build rule for target.
+compute_disparity: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compute_disparity
+.PHONY : compute_disparity
+
+# fast build rule for target.
+compute_disparity/fast:
+	$(MAKE) -f CMakeFiles/compute_disparity.dir/build.make CMakeFiles/compute_disparity.dir/build
+.PHONY : compute_disparity/fast
+
+#=============================================================================
+# Target rules for targets named direct_method
+
+# Build rule for target.
+direct_method: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 direct_method
+.PHONY : direct_method
+
+# fast build rule for target.
+direct_method/fast:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/build
+.PHONY : direct_method/fast
+
+compute_disparity.o: compute_disparity.cpp.o
+
+.PHONY : compute_disparity.o
+
+# target to build an object file
+compute_disparity.cpp.o:
+	$(MAKE) -f CMakeFiles/compute_disparity.dir/build.make CMakeFiles/compute_disparity.dir/compute_disparity.cpp.o
+.PHONY : compute_disparity.cpp.o
+
+compute_disparity.i: compute_disparity.cpp.i
+
+.PHONY : compute_disparity.i
+
+# target to preprocess a source file
+compute_disparity.cpp.i:
+	$(MAKE) -f CMakeFiles/compute_disparity.dir/build.make CMakeFiles/compute_disparity.dir/compute_disparity.cpp.i
+.PHONY : compute_disparity.cpp.i
+
+compute_disparity.s: compute_disparity.cpp.s
+
+.PHONY : compute_disparity.s
+
+# target to generate assembly for a file
+compute_disparity.cpp.s:
+	$(MAKE) -f CMakeFiles/compute_disparity.dir/build.make CMakeFiles/compute_disparity.dir/compute_disparity.cpp.s
+.PHONY : compute_disparity.cpp.s
+
+direct_method.o: direct_method.cpp.o
+
+.PHONY : direct_method.o
+
+# target to build an object file
+direct_method.cpp.o:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/direct_method.cpp.o
+.PHONY : direct_method.cpp.o
+
+direct_method.i: direct_method.cpp.i
+
+.PHONY : direct_method.i
+
+# target to preprocess a source file
+direct_method.cpp.i:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/direct_method.cpp.i
+.PHONY : direct_method.cpp.i
+
+direct_method.s: direct_method.cpp.s
+
+.PHONY : direct_method.s
+
+# target to generate assembly for a file
+direct_method.cpp.s:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/direct_method.cpp.s
+.PHONY : direct_method.cpp.s
+
 optical_flow.o: optical_flow.cpp.o
 
 .PHONY : optical_flow.o
@@ -157,8 +237,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... optical_flow"
 	@echo "... edit_cache"
+	@echo "... optical_flow"
+	@echo "... compute_disparity"
+	@echo "... direct_method"
+	@echo "... compute_disparity.o"
+	@echo "... compute_disparity.i"
+	@echo "... compute_disparity.s"
+	@echo "... direct_method.o"
+	@echo "... direct_method.i"
+	@echo "... direct_method.s"
 	@echo "... optical_flow.o"
 	@echo "... optical_flow.i"
 	@echo "... optical_flow.s"

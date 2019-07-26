@@ -15,11 +15,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e983a105-e9d7-435b-80da-b21675cfeec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ch6/code/.idea/code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ch6/code/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ch6/code/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ch6/code/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ch6/code/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ch4/code/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch4/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch4/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/optical_flow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/optical_flow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/optical_flow" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/optical_flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/slam_6.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/slam_6.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/direct_method.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/direct_method.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/optical_flow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/optical_flow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/homework6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/homework6.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/computeORB.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="703">
               <caret line="37" column="25" selection-start-line="37" selection-end-line="38" />
               <folding>
                 <element signature="e#63#92#0" expanded="true" />
@@ -58,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GN-BA.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+            <state relative-caret-position="568">
+              <caret line="97" column="16" lean-forward="true" selection-start-line="97" selection-start-column="16" selection-end-line="98" selection-end-column="75" />
               <folding>
                 <element signature="e#40#61#0" expanded="true" />
                 <element signature="e#110#127#0" expanded="true" />
@@ -71,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ICP.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
+            <state relative-caret-position="2318">
               <caret line="122" selection-start-line="122" selection-end-line="122" />
               <folding>
                 <element signature="e#39#62#0" expanded="true" />
@@ -104,8 +120,8 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="5">
-    <option name="x" value="2027" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="2350" />
     <option name="y" value="24" />
     <option name="width" value="980" />
     <option name="height" value="1056" />
@@ -134,7 +150,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ch6/code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -172,10 +188,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.computeORB" />
       <item itemvalue="CMake Application.E2Rt" />
       <item itemvalue="CMake Application.GN-BA" />
       <item itemvalue="CMake Application.ICP" />
+      <item itemvalue="CMake Application.computeORB" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -191,14 +207,15 @@
       <workItem from="1563006848766" duration="10297000" />
       <workItem from="1563017816589" duration="43588000" />
       <workItem from="1564056301562" duration="2536000" />
+      <workItem from="1564120634569" duration="611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56421000" />
+    <option name="totallyTimeSpent" value="57032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2027" y="24" width="980" height="1056" extended-state="5" />
+    <frame x="2350" y="24" width="980" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.114857145" />
@@ -325,19 +342,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ICP.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-          <folding>
-            <element signature="e#39#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/computeORB.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="703">
           <caret line="37" column="25" selection-start-line="37" selection-end-line="38" />
           <folding>
             <element signature="e#63#92#0" expanded="true" />
@@ -352,10 +359,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ICP.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2318">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#39#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GN-BA.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        <state relative-caret-position="568">
+          <caret line="97" column="16" lean-forward="true" selection-start-line="97" selection-start-column="16" selection-end-line="98" selection-end-column="75" />
           <folding>
             <element signature="e#40#61#0" expanded="true" />
             <element signature="e#110#127#0" expanded="true" />

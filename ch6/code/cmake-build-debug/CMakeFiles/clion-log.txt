@@ -1,4 +1,5 @@
 /home/xbot/Downloads/clion-2019.1.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/xbot/VSLAM_Homework/ch6/code
+-- Boost version: 1.58.0
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug

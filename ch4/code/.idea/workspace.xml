@@ -14,10 +14,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fff0afb5-2d23-47aa-a17a-245356448cfc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/disparity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/disparity.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gaussnewton.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gaussnewton.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/undistort_image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/undistort_image.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework4.md" beforeDir="false" afterPath="$PROJECT_DIR$/../homework4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch5/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch5/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/optical_flow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/optical_flow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/optical_flow.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/optical_flow" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/optical_flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/slam_6.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/cmake-build-debug/slam_6.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/direct_method.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/direct_method.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/code/optical_flow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/code/optical_flow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ch6/homework6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch6/homework6.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,37 +46,34 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gaussnewton.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-              <folding>
-                <element signature="e#38#57#0" expanded="true" />
-              </folding>
+              <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gaussnewton.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/disparity.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" selection-start-line="21" selection-end-line="62" selection-end-column="1" />
+            <state relative-caret-position="627">
+              <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding>
                 <element signature="e#28#57#0" expanded="true" />
+                <element signature="e#1591#2842#0" />
               </folding>
             </state>
           </provider>
@@ -90,9 +104,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="2296" />
+    <option name="x" value="2195" />
     <option name="y" value="24" />
-    <option name="width" value="1260" />
+    <option name="width" value="625" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -168,11 +182,12 @@
       <workItem from="1562498769619" duration="252000" />
       <workItem from="1562500206792" duration="182000" />
       <workItem from="1562500402517" duration="4771000" />
+      <workItem from="1564118187387" duration="1045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5205000" />
+    <option name="totallyTimeSpent" value="6250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -184,7 +199,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2296" y="24" width="1260" height="1056" extended-state="4" />
+    <frame x="2195" y="24" width="625" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25977653" />
@@ -242,16 +257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/disparity.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" selection-start-line="21" selection-end-line="62" selection-end-column="1" />
-          <folding>
-            <element signature="e#28#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/cmath">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -297,16 +302,24 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="31" />
+          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gaussnewton.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+        <state relative-caret-position="560">
+          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/disparity.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding>
-            <element signature="e#38#57#0" expanded="true" />
+            <element signature="e#28#57#0" expanded="true" />
+            <element signature="e#1591#2842#0" />
           </folding>
         </state>
       </provider>

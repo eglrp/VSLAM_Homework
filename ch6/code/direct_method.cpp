@@ -5,9 +5,11 @@
 #include <string>
 #include <boost/format.hpp>
 #include <pangolin/pangolin.h>
+#include <chrono>
 
 using namespace std;
-
+using namespace chrono;
+using namespace cv;
 typedef vector<Eigen::Vector2d, Eigen::aligned_allocator<Eigen::Vector2d>> VecVector2d;
 
 // Camera intrinsics
@@ -16,9 +18,9 @@ double fx = 718.856, fy = 718.856, cx = 607.1928, cy = 185.2157;
 // 基线
 double baseline = 0.573;
 // paths
-string left_file = "./left.png";
-string disparity_file = "./disparity.png";
-boost::format fmt_others("./%06d.png");    // other files
+string left_file = "../left.png";
+string disparity_file = "../disparity.png";
+boost::format fmt_others("../%06d.png");    // other files
 
 // useful typedefs
 typedef Eigen::Matrix<double, 6, 6> Matrix6d;
@@ -99,7 +101,8 @@ int main(int argc, char **argv) {
 
     for (int i = 1; i < 6; i++) {  // 1~10
         cv::Mat img = cv::imread((fmt_others % i).str(), 0);
-        // DirectPoseEstimationSingleLayer(left_img, img, pixels_ref, depth_ref, T_cur_ref);    // first you need to test single layer
+//        DirectPoseEstimationSingleLayer(left_img, img, pixels_ref, depth_ref,
+//                                        T_cur_ref);    // first you need to test single layer
         DirectPoseEstimationMultiLayer(left_img, img, pixels_ref, depth_ref, T_cur_ref);
     }
 }
@@ -117,7 +120,7 @@ void DirectPoseEstimationSingleLayer(
     int iterations = 100;
 
     double cost = 0, lastCost = 0;
-    int nGood = 0;  // good projections
+    int nGood = 0;  // good projections 最后求平均误差用这个标记在图像内的点
     VecVector2d goodProjection;
 
     for (int iter = 0; iter < iterations; iter++) {
@@ -133,21 +136,52 @@ void DirectPoseEstimationSingleLayer(
             // compute the projection in the second image
             // TODO START YOUR CODE HERE
             float u =0, v = 0;
+            //cout << "第一图：x：" << px_ref[i][0] << "第2图：y：" << px_ref[i][1] << endl;
+            float x, y, z;
+            float X, Y,Z, Z_2;
+            z = (float)depth_ref[i];
+            x = (px_ref[i][0]-cx)*z/fx;
+            y = (px_ref[i][1]-cy)*z/fy;
+            Eigen::Vector3d point3d = {x, y, z};
+            Eigen::Vector3d point_rotation;
+            point_rotation = T21 * point3d;
+            X = point_rotation[0];
+            Y = point_rotation[1];
+            Z = point_rotation[2];
+            u = (X*fx/Z + cx);
+            v = (Y*fy/Z + cy);
+            //cout << "u: " << u << "v: " << v << endl;
+            Z_2 = Z * Z;
+
+            if (u < half_patch_size || u >= (img2.cols-half_patch_size) ||
+            v < half_patch_size || v >= (img2.rows-half_patch_size)){
+                continue;
+            }
             nGood++;
             goodProjection.push_back(Eigen::Vector2d(u, v));
-
             // and compute error and jacobian
+
             for (int x = -half_patch_size; x < half_patch_size; x++)
                 for (int y = -half_patch_size; y < half_patch_size; y++) {
-
+                    float u1,v1,u2,v2;
                     double error =0;
-
-                    Matrix26d J_pixel_xi;   // pixel to \xi in Lie algebra
+                    u1 = px_ref[i][0] + x;
+                    v1 = px_ref[i][1] + y;
+                    u2 = u + x;
+                    v2 = v + y;
+                    error =GetPixelValue(img1,u1, v1) - GetPixelValue(img2,u2,v2);
+                    if (u2+1>=img2.cols || u2-1<0 || v2+1>=img2.rows || v2-1<0){
+                        continue;
+                    }
                     Eigen::Vector2d J_img_pixel;    // image gradients
-
-                    // total jacobian
-                    Vector6d J=0;
-
+                    Matrix26d J_pixel_xi;   // pixel to \xi in Lie algebra
+                    J_pixel_xi <<-(fx/Z), 0, fx*X/Z_2,  fx*X*Y/Z_2, -(fx+fx*X*X/Z_2), fx*Y/Z,
+                            0, -fy/Z, fy*Y/Z_2,fy+fy*Y*Y/Z_2, -fy*X*Y/Z_2, -fy*X/Z;
+                    J_img_pixel[0] = (GetPixelValue(img2,u2+1,v2) - GetPixelValue(img2,u2-1,v2))/2; // de/dx
+                    J_img_pixel[1] = (GetPixelValue(img2,u2,v2+1) - GetPixelValue(img2,u2,v2-1))/2; // de/dy
+                    Vector6d J;
+                    J_pixel_xi = - J_pixel_xi;
+                    J = -J_pixel_xi.transpose() * J_img_pixel;
                     H += J * J.transpose();
                     b += -error * J;
                     cost += error * error;
@@ -158,6 +192,7 @@ void DirectPoseEstimationSingleLayer(
         // solve update and put it into estimation
         // TODO START YOUR CODE HERE
         Vector6d update;
+        update = H.ldlt().solve(b);
         T21 = Sophus::SE3::exp(update) * T21;
         // END YOUR CODE HERE
 
@@ -173,7 +208,7 @@ void DirectPoseEstimationSingleLayer(
             break;
         }
         lastCost = cost;
-        cout << "cost = " << cost << ", good = " << nGood << endl;
+        // cout << "cost = " << cost << ", good = " << nGood << endl;
     }
     cout << "good projection: " << nGood << endl;
     cout << "T21 = \n" << T21.matrix() << endl;
@@ -211,7 +246,13 @@ void DirectPoseEstimationMultiLayer(
     // create pyramids
     vector<cv::Mat> pyr1, pyr2; // image pyramids
     // TODO START YOUR CODE HERE
-
+    Mat img1_temp, img2_temp;
+    for (int i = 0; i < pyramids; i++) {
+        resize(img1, img1_temp, Size(img1.cols*scales[i],img1.rows*scales[i]));
+        resize(img2, img2_temp, Size(img2.cols*scales[i],img2.rows*scales[i]));
+        pyr1.push_back(img1_temp);
+        pyr2.push_back(img2_temp);
+    }
     // END YOUR CODE HERE
 
     double fxG = fx, fyG = fy, cxG = cx, cyG = cy;  // backup the old values
@@ -223,9 +264,11 @@ void DirectPoseEstimationMultiLayer(
 
         // TODO START YOUR CODE HERE
         // scale fx, fy, cx, cy in different pyramid levels
-
+        fx = fxG * scales[level];
+        fy = fyG * scales[level];
+        cx = cxG * scales[level];
+        cy = cyG * scales[level];
         // END YOUR CODE HERE
         DirectPoseEstimationSingleLayer(pyr1[level], pyr2[level], px_ref_pyr, depth_ref, T21);
     }
-
 }

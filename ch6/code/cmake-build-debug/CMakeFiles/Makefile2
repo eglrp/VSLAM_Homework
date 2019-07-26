@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug
 CMakeFiles/optical_flow.dir/all:
 	$(MAKE) -f CMakeFiles/optical_flow.dir/build.make CMakeFiles/optical_flow.dir/depend
 	$(MAKE) -f CMakeFiles/optical_flow.dir/build.make CMakeFiles/optical_flow.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target optical_flow"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target optical_flow"
 .PHONY : CMakeFiles/optical_flow.dir/all
 
 # Include target in all.
@@ -98,6 +98,80 @@ CMakeFiles/optical_flow.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/optical_flow.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/compute_disparity.dir
+
+# All Build rule for target.
+CMakeFiles/compute_disparity.dir/all:
+	$(MAKE) -f CMakeFiles/compute_disparity.dir/build.make CMakeFiles/compute_disparity.dir/depend
+	$(MAKE) -f CMakeFiles/compute_disparity.dir/build.make CMakeFiles/compute_disparity.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target compute_disparity"
+.PHONY : CMakeFiles/compute_disparity.dir/all
+
+# Include target in all.
+all: CMakeFiles/compute_disparity.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/compute_disparity.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/compute_disparity.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/compute_disparity.dir/rule
+
+# Convenience name for target.
+compute_disparity: CMakeFiles/compute_disparity.dir/rule
+
+.PHONY : compute_disparity
+
+# clean rule for target.
+CMakeFiles/compute_disparity.dir/clean:
+	$(MAKE) -f CMakeFiles/compute_disparity.dir/build.make CMakeFiles/compute_disparity.dir/clean
+.PHONY : CMakeFiles/compute_disparity.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/compute_disparity.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/direct_method.dir
+
+# All Build rule for target.
+CMakeFiles/direct_method.dir/all:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/depend
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target direct_method"
+.PHONY : CMakeFiles/direct_method.dir/all
+
+# Include target in all.
+all: CMakeFiles/direct_method.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/direct_method.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/direct_method.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xbot/VSLAM_Homework/ch6/code/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/direct_method.dir/rule
+
+# Convenience name for target.
+direct_method: CMakeFiles/direct_method.dir/rule
+
+.PHONY : direct_method
+
+# clean rule for target.
+CMakeFiles/direct_method.dir/clean:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/clean
+.PHONY : CMakeFiles/direct_method.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/direct_method.dir/clean
 
 .PHONY : clean
 
