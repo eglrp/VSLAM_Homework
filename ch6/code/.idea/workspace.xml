@@ -13,31 +13,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef58df3-8be5-44dd-9074-1b2380a065a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ch4/.idea/ch4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ch4/code/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compute_disparity.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ch4/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch4/code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ch5/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch5/code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/optical_flow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/optical_flow.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optical_flow.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/optical_flow" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/optical_flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/slam_6.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/slam_6.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/direct_method.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/direct_method.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optical_flow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/optical_flow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../homework6.md" afterDir="false" />
-    </list>
+    <list default="true" id="cef58df3-8be5-44dd-9074-1b2380a065a3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +64,7 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="5">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="2324" />
     <option name="y" value="24" />
     <option name="width" value="1478" />
@@ -167,15 +143,15 @@
       <option name="presentableId" value="Default" />
       <updated>1564023987504</updated>
       <workItem from="1564023988624" duration="43749000" />
-      <workItem from="1564137034880" duration="10672000" />
+      <workItem from="1564137034880" duration="11270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54421000" />
+    <option name="totallyTimeSpent" value="55019000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2324" y="24" width="1478" height="1056" extended-state="5" />
+    <frame x="2324" y="24" width="1478" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -188,7 +164,7 @@
       <window_info anchor="bottom" id="Messages" order="4" weight="0.47058824" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.4642857" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.4642857" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3983051" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.1255102" />
