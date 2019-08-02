@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="direct-ba"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\slambook\;CMake Files\..\..\..\..\slambook\3rdparty\;CMake Files\..\..\..\..\slambook\3rdparty\Pangolin\;CMake Files\..\..\..\..\slambook\3rdparty\Pangolin\build\;CMake Files\..\..\..\..\slambook\3rdparty\Pangolin\build\src\;CMake Files\..\..\..\..\slambook\3rdparty\Sophus\;CMake Files\..\..\..\..\slambook\3rdparty\Sophus\build\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="direct-ba">
+				<Option output="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/direct-ba" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 direct-ba"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="direct-ba/fast">
+				<Option output="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/direct-ba" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Pangolin/build/src/include"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 direct-ba/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/directBA.cpp">
+			<Option target="direct-ba"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake_modules/FindCholmod.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake_modules/FindEigen3.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/cmake_modules/FindG2O.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../slambook/3rdparty/Pangolin/build/src/PangolinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\slambook\3rdparty\Pangolin\build\src\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../slambook/3rdparty/Pangolin/build/src/PangolinConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\slambook\3rdparty\Pangolin\build\src\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../slambook/3rdparty/Pangolin/build/src/PangolinTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\slambook\3rdparty\Pangolin\build\src\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../slambook/3rdparty/Sophus/build/SophusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\slambook\3rdparty\Sophus\build\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/xbot/VSLAM_Homework/ch7/code/project2_Direct_BA/../../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

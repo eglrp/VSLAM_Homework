@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="g2o_customBundle"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\3rdparty\;CMake Files\..\..\3rdparty\Sophus\;CMake Files\..\..\3rdparty\Sophus\build\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="g2o_customBundle">
+				<Option output="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/g2o_customBundle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/tools"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/flags"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 g2o_customBundle"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="g2o_customBundle/fast">
+				<Option output="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/g2o_customBundle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/tools"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/flags"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 g2o_customBundle/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BALProblem">
+				<Option output="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/libBALProblem.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/tools"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/flags"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 BALProblem"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BALProblem/fast">
+				<Option output="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/libBALProblem.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/tools"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/flags"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 BALProblem/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ParseCmd">
+				<Option output="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/libParseCmd.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/tools"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/flags"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 ParseCmd"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ParseCmd/fast">
+				<Option output="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/libParseCmd.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/ceres"/>
+					<Add directory="/home/xbot/slambook/3rdparty/Sophus"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/tools"/>
+					<Add directory="/home/xbot/slambook/ch10/g2o_custombundle/common/flags"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 ParseCmd/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xbot/slambook/ch10/g2o_custombundle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/common/BALProblem.cpp">
+			<Option target="BALProblem"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/common/BALProblem.h">
+			<Option target="BALProblem"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/common/flags/command_args.cpp">
+			<Option target="ParseCmd"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/common/flags/command_args.h">
+			<Option target="ParseCmd"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/g2o_bundle.cpp">
+			<Option target="g2o_customBundle"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/cmake_modules/FindCholmod.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/cmake_modules/FindEigen3.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/cmake_modules/FindG2O.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/xbot/slambook/ch10/g2o_custombundle/../../3rdparty/Sophus/build/SophusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\3rdparty\Sophus\build\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
