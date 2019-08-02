@@ -12,23 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a6c4cdc-33cf-4844-a3ba-b04c14e59a5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project2_Direct_BA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ch6/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ch6/code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../directBA.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../poses.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../homework7.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../homework7.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework7.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../homework7.pdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/directBA.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1137">
-              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+            <state relative-caret-position="402">
+              <caret line="138" column="38" lean-forward="true" selection-end-line="369" />
               <folding>
                 <element signature="e#132#169#0" expanded="true" />
                 <element signature="e#5144#7959#0" />
@@ -96,7 +81,7 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="2064" />
     <option name="y" value="24" />
     <option name="width" value="1760" />
@@ -159,15 +144,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564734249175</updated>
-      <workItem from="1564734250307" duration="16069000" />
+      <workItem from="1564734250307" duration="16721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16069000" />
+    <option name="totallyTimeSpent" value="16721000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2064" y="24" width="1760" height="1056" extended-state="1" />
+    <frame x="2064" y="24" width="1760" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.1302999" />
@@ -180,7 +166,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.9684874" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.05672269" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,8 +233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/directBA.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1137">
-          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        <state relative-caret-position="402">
+          <caret line="138" column="38" lean-forward="true" selection-end-line="369" />
           <folding>
             <element signature="e#132#169#0" expanded="true" />
             <element signature="e#5144#7959#0" />
