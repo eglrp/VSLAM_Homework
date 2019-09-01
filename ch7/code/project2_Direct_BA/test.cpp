@@ -86,38 +86,3 @@
 // TODO add vertices, edges into the graph optimizer
 // START YOUR CODE HERE
 // Add poses Vertex
-//    for (int j = 0; j < poses.size(); ++j) {
-//        VertexSophus* pCamera = new VertexSophus();
-//        pCamera->setEstimate(poses[j]);
-//        pCamera->setId(j);
-//        optimizer.addVertex(pCamera);
-//    }
-//    // Add points Vertex
-//    for (int k = 0; k < points.size(); ++k) {
-//        g2o::VertexSBAPointXYZ* pPoint = new g2o::VertexSBAPointXYZ();
-//        pPoint->setId(k);
-//        pPoint->setEstimate(points[k]);
-//        pPoint->setMarginalized(true);
-//        optimizer.addVertex(pPoint);
-//    }
-
-// Set edges for graphs
-//    int index = 1;
-//    for (int p = 0; p < images.size(); ++p) {
-//        for (int l = 0; l < points.size(); ++l) {
-//            EdgeDirectProjection* directEdge = new EdgeDirectProjection(color[l], images[p]);
-//            directEdge->setVertex(0, dynamic_cast<VertexSophus*>(optimizer.vertex(p)));
-//            directEdge->setVertex(1, dynamic_cast<g2o::VertexSBAPointXYZ*>(optimizer.vertex(l)));
-//            // Todo 维度要注意
-//            directEdge->setInformation(Eigen::Matrix<double,16,16>::Identity());
-//            directEdge->setId(index++);
-//            if(ROBUST)
-//            {
-//                g2o::RobustKernelHuber* rk = new g2o::RobustKernelHuber;
-//                rk->setDelta(1.0); // huber 参数
-//                directEdge->setRobustKernel(rk);
-//            }
-//
-//            optimizer.addEdge(directEdge);
-//        }
-//    }

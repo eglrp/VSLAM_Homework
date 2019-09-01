@@ -12,8 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a6c4cdc-33cf-4844-a3ba-b04c14e59a5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../homework7.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../homework7.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../homework7.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../homework7.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/directBA.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/directBA.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,15 +28,33 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/directBA.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="138" column="38" lean-forward="true" selection-end-line="369" />
+            <state relative-caret-position="4522">
+              <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
               <folding>
                 <element signature="e#132#169#0" expanded="true" />
-                <element signature="e#5144#7959#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file:///usr/local/include/g2o/core/block_solver.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="892">
+              <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+              <folding>
+                <element signature="e#1478#1499#0" expanded="true" />
+                <element signature="e#1799#1831#0" expanded="true" />
+                <element signature="e#1834#2674#1" />
+                <element signature="e#2788#2790#0" expanded="true" />
+                <element signature="e#2793#3429#1" />
+                <element signature="e#3521#3745#1" />
+                <element signature="e#3849#3866#0" expanded="true" />
+                <element signature="e#6946#6990#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="1672">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
             </state>
           </provider>
         </entry>
@@ -81,8 +100,8 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2064" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="155" />
     <option name="y" value="24" />
     <option name="width" value="1760" />
     <option name="height" value="1056" />
@@ -92,20 +111,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="direct-ba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2_Direct_BA" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -145,25 +151,21 @@
       <option name="presentableId" value="Default" />
       <updated>1564734249175</updated>
       <workItem from="1564734250307" duration="16721000" />
+      <workItem from="1564760072122" duration="4804000" />
+      <workItem from="1565088815035" duration="20000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16721000" />
+    <option name="totallyTimeSpent" value="21545000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2064" y="24" width="1760" height="1056" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.1302999" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="CMake" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.25945377" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.05672269" />
@@ -171,10 +173,16 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.25945377" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -217,6 +225,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/include/g2o/core/base_binary_edge.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="66" lean-forward="true" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/directBA.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4522">
+          <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
+          <folding>
+            <element signature="e#132#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
@@ -224,20 +256,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.cpp">
+    <entry file="file:///usr/local/include/g2o/core/block_solver.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/directBA.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="138" column="38" lean-forward="true" selection-end-line="369" />
+        <state relative-caret-position="892">
+          <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
           <folding>
-            <element signature="e#132#169#0" expanded="true" />
-            <element signature="e#5144#7959#0" />
+            <element signature="e#1478#1499#0" expanded="true" />
+            <element signature="e#1799#1831#0" expanded="true" />
+            <element signature="e#1834#2674#1" />
+            <element signature="e#2788#2790#0" expanded="true" />
+            <element signature="e#2793#3429#1" />
+            <element signature="e#3521#3745#1" />
+            <element signature="e#3849#3866#0" expanded="true" />
+            <element signature="e#6946#6990#0" expanded="true" />
           </folding>
         </state>
       </provider>

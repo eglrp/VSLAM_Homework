@@ -83,6 +83,7 @@ public:
 // TODO edge of projection error, implement it
 // 16x1 error, which is the errors in patch
 typedef Eigen::Matrix<double,16,1> Vector16d;
+// <error维度， 误差数据类型， 两个顶点的数据类型>
 class EdgeDirectProjection : public g2o::BaseBinaryEdge<16, Vector16d, g2o::VertexSBAPointXYZ, VertexSophus> {
 public:
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
@@ -245,25 +246,33 @@ int main(int argc, char **argv) {
 
     // TODO add vertices, edges into the graph optimizer
     // START YOUR CODE HERE
-    for (int i = 0; i < points.size(); i++) {
-        VertexSBAPointXYZ *vertexPw = new VertexSBAPointXYZ();
-        vertexPw->setEstimate(points[i]);
-        vertexPw->setId(i);
-        vertexPw->setMarginalized(true);
-        optimizer.addVertex(vertexPw);
+
+    // 先point后pose的顺序
+
+    for (int k = 0; k < points.size(); ++k) {
+        VertexSBAPointXYZ* pPoint = new VertexSBAPointXYZ();
+        pPoint->setId(k);
+        pPoint->setEstimate(points[k]);
+        pPoint->setMarginalized(true);
+        optimizer.addVertex(pPoint);
     }
+
     for (int j = 0; j < poses.size(); j++) {
         VertexSophus *vertexTcw = new VertexSophus();
         vertexTcw->setEstimate(poses[j]);
+        // id很简单按照顺序排队
         vertexTcw->setId(j + points.size());
         optimizer.addVertex(vertexTcw);
     }
 
+
     for (int c = 0; c < poses.size(); c++)
         for (int p = 0; p < points.size(); p++) {
             EdgeDirectProjection *edge = new EdgeDirectProjection(color[p], images[c]);
+            // 先point后pose
             edge->setVertex(0, dynamic_cast<VertexSBAPointXYZ *>(optimizer.vertex(p)));
             edge->setVertex(1, dynamic_cast<VertexSophus *>(optimizer.vertex(c + points.size())));
+            // 这个不明白 我认为是信息矩阵H的维度， 好像没错，误差是16 × 1 那么雅克比16 × 9  H就是
             edge->setInformation(Matrix<double, 16, 16>::Identity());
             RobustKernelHuber *rk = new RobustKernelHuber;
             rk->setDelta(1.0);
