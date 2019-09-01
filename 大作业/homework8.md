@@ -54,7 +54,7 @@
 #### 1.
 
 视觉
-```
+```cpp
 
 void EdgeReprojection::ComputeResidual() {
 //    std::cout << pts_i_.transpose() <<" "<<pts_j_.transpose()  <<std::endl;
